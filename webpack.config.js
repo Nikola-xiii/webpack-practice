@@ -35,7 +35,7 @@ const developmentConfig = {
     // Enable history API fallback so HTML5 History API based
     // routing works. This is a good default that will come
     // in handy in more complicated setups.
-    historyApiFallback: thue,
+    historyApiFallback: true,
 
     // Unlike the cli flag, this doesn't set
     // HotModuleReplacementPlugin!
@@ -46,7 +46,7 @@ const developmentConfig = {
     hotOnly: true,
 
     // Display only errors to reduce the amount of output.
-    stats: "error-only",
+    stats: "errors-only",
 
     // Parse host and port from env to allow customization.
     //
@@ -72,7 +72,11 @@ module.exports = function (env){
   if (env === 'production') {
     return common;
   }
-  return Object.assign({}, common, developmentConfig, {
+  return Object.assign(
+    {},
+    common,
+    developmentConfig,
+    {
       plugins: common.plugins.concat(developmentConfig.plugins),
     }
   );
