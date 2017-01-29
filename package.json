@@ -21,6 +21,7 @@
   "homepage": "https://github.com/Nikola-xiii/webpack-practice#readme",
   "devDependencies": {
     "eslint": "^3.14.1",
+    "eslint-loader": "^1.6.1",
     "html-webpack-plugin": "^2.26.0",
     "webpack": "^2.2.0",
     "webpack-dev-server": "^2.2.0"
