@@ -4,4 +4,4 @@ export default function () {
   element.innerHTML = 'Hello world';
 
   return element;
-};
+}

@@ -57,3 +57,17 @@ exports.lintJavaScript = function ({paths, options}) {
         }
     }
 };
+
+exports.loadCSS = function (paths) {
+    return {
+        module: {
+            rules: [
+                {
+                    test: /\.css$/,
+                    include: paths,
+                    use: ['style-loader', 'css-loader'],
+                }
+            ]
+        }
+    }
+};
